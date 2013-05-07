@@ -1,13 +1,14 @@
 #!/bin/bash
 #
 # @author   Bram van Oploo
+# @revisedby Brew
 # @date     2013-02-12
-# @version  2.6.1
+# @version  1.1
 #
 
 XBMC_USER="xbmc"
 THIS_FILE=$0
-SCRIPT_VERSION="2.6.1"
+SCRIPT_VERSION="1.1"
 VIDEO_DRIVER=""
 HOME_DIRECTORY="/home/$XBMC_USER/"
 TEMP_DIRECTORY=$HOME_DIRECTORY"temp/"
@@ -37,14 +38,14 @@ AUTO_MOUNT_RULES_FILE="/etc/udev/rules.d/media-by-label-auto-mount.rules"
 SYSCTL_CONF_FILE="/etc/sysctl.conf"
 RSYSLOG_FILE="/etc/init/rsyslog.conf"
 POWERMANAGEMENT_DIR="/var/lib/polkit-1/localauthority/50-local.d/"
-DOWNLOAD_URL="https://github.com/brewhaase/xbmc-ubuntu-minimal/raw/master/12.10/download/"
+DOWNLOAD_URL="https://github.com/brewhaase/xbmc-frodo/Frodo_Install/Downloads/"
 XBMC_PPA="ppa:team-xbmc/ppa"
 HTS_TVHEADEND_PPA="ppa:jabbors/hts-stable"
 OSCAM_PPA="ppa:oscam/ppa"
 
 LOG_FILE=$HOME_DIRECTORY"xbmc_installation.log"
 DIALOG_WIDTH=70
-SCRIPT_TITLE="XBMC installation script v$SCRIPT_VERSION for Ubuntu 12.10 by Bram van Oploo :: bram@sudo-systems.com :: www.sudo-systems.com"
+SCRIPT_TITLE="XBMC installation script v$SCRIPT_VERSION for Ubuntu 12.10 by Bram van Oploo updated by Brew"
 
 GFX_CARD=$(lspci |grep VGA |awk -F: {' print $3 '} |awk {'print $1'} |tr [a-z] [A-Z])
 
